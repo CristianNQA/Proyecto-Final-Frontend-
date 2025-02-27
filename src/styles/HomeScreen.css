@@ -1,0 +1,136 @@
+/* Importar una fuente mas moderna */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #6366f1, #3b82f6); /*Hace mas contraste*/
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Responsivo para pantallas grandes */
+@media (min-width: 2000px) {
+  .home-container {
+    min-height: 100vh;
+    background: linear-gradient(to right, #4f46e5, #2563eb); 
+    padding: 40px;
+  }
+}
+
+/* Tarjeta de home */
+.home-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  animation: fadeIn 0.6s ease-in-out; /*Efecto de animacion gradual*/
+}
+
+/* home-card para pantallas grandes */
+@media (min-width: 2000px) {
+  .home-card {
+    max-width: 700px;
+    padding: 60px;
+  }
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título */
+.home-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+}
+
+.home-highlight {
+  color: #3b82f6;
+}
+
+@media (min-width: 2000px) {
+  .home-title {
+    font-size: 40px;
+  }
+}
+
+/* Descripción */
+.home-description {
+  color: #555;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+@media (min-width: 2000px) {
+  .home-description {
+    font-size: 22px;
+  }
+}
+
+/* Botones */
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.home-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.home-btn.login {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.home-btn.login:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
+}
+
+.home-btn.register {
+  background-color: #e5e7eb;
+  color: #333;
+}
+
+.home-btn.register:hover {
+  background-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 2000px) {
+  .home-btn {
+    font-size: 20px;
+    padding: 18px 30px;
+  }
+}
+

@@ -1,0 +1,227 @@
+/* Contenedor principal */
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #3b82f6, #6366f1);
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  /* Para pantallas grandes (2000px o mas) */
+  @media (min-width: 2000px) {
+    .tasks-container {
+      padding: 50px;
+    }
+  }
+  
+  /* Título */
+  .tasks-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* Para celulares pequeños (320px-480px) */
+  @media (max-width: 480px) {
+    .tasks-title {
+      font-size: 22px;
+    }
+  }
+  
+  /* Para pantallas grandes */
+  @media (min-width: 2000px) {
+    .tasks-title {
+      font-size: 40px;
+    }
+  }
+  
+  /* Formulario */
+  .tasks-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 30px;
+    animation: fadeIn 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Para celulares pequeños */
+  @media (max-width: 480px) {
+    .tasks-form {
+      padding: 20px;
+      max-width: 350px;
+    }
+  }
+  
+  /* Para pantallas grandes */
+  @media (min-width: 2000px) {
+    .tasks-form {
+      max-width: 700px;
+      padding: 60px;
+    }
+  }
+  
+  /* Inputs */
+  .tasks-form input,
+  .tasks-form textarea {
+    width: 100%;
+    max-width: 400px; /* Máximo ancho */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  /* Para celulares pequeños */
+  @media (max-width: 480px) {
+    .tasks-form input,
+    .tasks-form textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+  /* Para pantallas grandes */
+  @media (min-width: 2000px) {
+    .tasks-form input,
+    .tasks-form textarea {
+      font-size: 20px;
+      padding: 18px;
+    }
+  }
+  
+  /* Botones */
+  .tasks-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Botón Cancelar */
+  .tasks-btn-cancel {
+    background-color: #ef4444;
+  }
+  
+  /* Hover de botones */
+  .tasks-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
+  }
+  
+  /* Lista de tareas */
+  .tasks-list {
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  /* Cada tarea */
+  .task-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Para pantallas grandes */
+  @media (min-width: 2000px) {
+    .task-item {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  /* Título de tarea */
+  .task-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Botones de acción */
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .task-actions button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Botón editar */
+  .task-edit {
+    background-color: #facc15;
+    color: #333;
+  }
+  
+  /* Botón eliminar */
+  .task-delete {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  /* Hover */
+  .task-edit:hover {
+    background-color: #eab308;
+  }
+  
+  .task-delete:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Para celulares pequeños */
+  @media (max-width: 480px) {
+    .task-item {
+      align-items: flex-start;
+    }
+  
+    .task-actions {
+      flex-direction: column;
+    }
+  }
+  
+  /* Animación */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
