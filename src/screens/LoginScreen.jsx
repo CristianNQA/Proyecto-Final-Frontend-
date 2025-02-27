@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/LoginScreen.css"
-import API_URL from "../utils/api";
+import API_URL from "../utils/api.js";
 
 const LoginScreen = () => {
   const [user, setUser] = useState({ email: "", password: "" });
