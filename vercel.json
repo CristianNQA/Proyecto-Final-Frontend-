@@ -1,5 +1,9 @@
 {
-    "rewrites": [
-        {"source": "/(.*)", "destination": "/"}
-    ]
-}
+    "build": {
+      "command": "npm install && npm run build",
+      "env": {
+        "VITE_API_URL": "http://localhost:3000"
+      }
+    }
+  }
+  
